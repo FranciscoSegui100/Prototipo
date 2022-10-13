@@ -1,0 +1,76 @@
+* {
+	margin: 0%;
+	padding: 0%;
+	box-sizing: border-box;
+}
+a { text-decoration: none; 
+    color: black;}
+    @keyframes slide-in-blurred-top{0%{transform:translateY(-1000px) scaleY(2.5) scaleX(.2);transform-origin:50% 0;filter:blur(40px);opacity:0}100%{transform:translateY(0) scaleY(1) scaleX(1);transform-origin:50% 50%;filter:blur(0);opacity:1}}
+    @keyframes slide-in-bck-center{0%{transform:translateZ(600px);opacity:0}100%{transform:translateZ(0);opacity:1}}
+@import url('https://fonts.googleapis.com/css2?family=Indie+Flower&display=swap');
+ $estilos: (
+        bg-color:#9DE9E9,
+        bg-color2:#4DBACE,
+        bg-color3:#9ADCFF,
+        color:#ffff
+        );
+#body{
+    background-color: map-get($estilos, bg-color);
+    display: flex;  
+    flex-direction: column;
+    .navbar{
+        font-family: 'Indie Flower', cursive;
+        color: #ffff;
+        background-color: map-get($estilos, bg-color2 );
+        .navbar-toggler-icon {
+            filter: invert(1);
+        }
+        .logoNav{
+            border-radius: 30px;
+        }
+    }
+    .text-1{
+        @extend .navbar;
+        margin-top: 20px;
+        text-align: center;
+        padding: 10px;
+        animation:slide-in-blurred-top 1.5s cubic-bezier(.23,1.000,.32,1.000) 1.5s both;
+    }
+    .carrousel{
+        margin-top: 20px;
+        animation:slide-in-bck-center 2s cubic-bezier(.25,.46,.45,.94) both;
+    }
+    .materias{
+        color: #ffff;
+        font-family:'Indie Flower', cursive;
+        background-color:#9ADCFF;
+        margin-top: 20px;
+        text-align: center;
+        padding: 10px;
+        animation:roll-in-blurred-right .7s cubic-bezier(.23,1.000,.32,1.000) both;
+        .materiasLi{
+            list-style: none;
+        }
+    }
+    #videos{
+        display: flex;
+        flex-direction: column;
+        padding: 15px;
+    }
+}
+// Estilos sweet alert//
+
+select.swal2-select{
+    font-family: 'Indie Flower', cursive;
+    background: #9ADCFF;
+    border-radius: 15px;
+}
+.swal2-title{
+    font-family: 'Indie Flower', cursive;
+}
+.swal2-styled.swal2-confirm{
+    @extend .swal2-title,
+}
+.swal2-html-container{
+    @extend .swal2-title,
+}
