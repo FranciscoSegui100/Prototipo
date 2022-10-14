@@ -7,12 +7,14 @@ a { text-decoration: none;
     color: black;}
     @keyframes slide-in-blurred-top{0%{transform:translateY(-1000px) scaleY(2.5) scaleX(.2);transform-origin:50% 0;filter:blur(40px);opacity:0}100%{transform:translateY(0) scaleY(1) scaleX(1);transform-origin:50% 50%;filter:blur(0);opacity:1}}
     @keyframes slide-in-bck-center{0%{transform:translateZ(600px);opacity:0}100%{transform:translateZ(0);opacity:1}}
+    @keyframes pulsate-fwd{0%{transform:scale(1)}50%{transform:scale(1.1)}100%{transform:scale(1)}}
 @import url('https://fonts.googleapis.com/css2?family=Indie+Flower&display=swap');
  $estilos: (
         bg-color:#9DE9E9,
         bg-color2:#4DBACE,
         bg-color3:#9ADCFF,
-        color:#ffff
+        color:#ffff,
+        fontFamily:'Indie Flower', cursive,
         );
 #body{
     background-color: map-get($estilos, bg-color);
@@ -52,12 +54,67 @@ a { text-decoration: none;
             list-style: none;
         }
     }
-    #videos{
+    .venta{
+        background-color: map-get($estilos, bg-color2 );
+        padding: 20px;
+        color: #ffff;
+        border-radius: 30px;
+        margin: 10px;
+        .h2Venta{
+            text-align: center;
+            text-decoration-color: none;
+            font-family: 'Indie Flower', cursive;
+        }
+        a{
+            text-decoration: none;
+            color: #ffff;
+        }
+        .listaVenta{
+            display: flex;
+            text-align: center;
+            list-style: none;
+            gap: 70px;
+            .l1{
+                animation:pulsate-fwd 1.5s ease-in-out infinite both;
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                justify-content: center;
+            }
+        }
+    }
+    .footer{
         display: flex;
         flex-direction: column;
-        padding: 15px;
+        align-items: center;
+        background-color: map-get($estilos, bg-color3 );
+        padding: 30px;
+        color: #ffff;
+    }
+    .redes{
+        display: flex;
+        list-style: none;
+        justify-content: space-around;
+        padding: 10px;
+        background-color: map-get($estilos, bg-color3 );
+        margin-bottom: -15px;
+        color: #ffff;
+        a{
+            text-decoration: none;
+            color: #ffff;
+        }
     }
 }
+
+    //Hoja Videos//
+    .body2{
+        @extend #body ;
+        #videos{
+            display: flex;
+            flex-direction: column;
+            padding: 15px;
+        }
+    }
 // Estilos sweet alert//
 
 select.swal2-select{

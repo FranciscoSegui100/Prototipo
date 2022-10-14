@@ -79,7 +79,37 @@ a {
   }
 }
 
-#body {
+@-webkit-keyframes pulsate-fwd {
+  0% {
+    -webkit-transform: scale(1);
+            transform: scale(1);
+  }
+  50% {
+    -webkit-transform: scale(1.1);
+            transform: scale(1.1);
+  }
+  100% {
+    -webkit-transform: scale(1);
+            transform: scale(1);
+  }
+}
+
+@keyframes pulsate-fwd {
+  0% {
+    -webkit-transform: scale(1);
+            transform: scale(1);
+  }
+  50% {
+    -webkit-transform: scale(1.1);
+            transform: scale(1.1);
+  }
+  100% {
+    -webkit-transform: scale(1);
+            transform: scale(1);
+  }
+}
+
+#body, .body2 {
   background-color: #9DE9E9;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -90,22 +120,22 @@ a {
           flex-direction: column;
 }
 
-#body .navbar, #body .text-1 {
+#body .navbar, .body2 .navbar, #body .text-1, .body2 .text-1 {
   font-family: 'Indie Flower', cursive;
   color: #ffff;
   background-color: #4DBACE;
 }
 
-#body .navbar .navbar-toggler-icon, #body .text-1 .navbar-toggler-icon {
+#body .navbar .navbar-toggler-icon, .body2 .navbar .navbar-toggler-icon, #body .text-1 .navbar-toggler-icon, .body2 .text-1 .navbar-toggler-icon {
   -webkit-filter: invert(1);
           filter: invert(1);
 }
 
-#body .navbar .logoNav, #body .text-1 .logoNav {
+#body .navbar .logoNav, .body2 .navbar .logoNav, #body .text-1 .logoNav, .body2 .text-1 .logoNav {
   border-radius: 30px;
 }
 
-#body .text-1 {
+#body .text-1, .body2 .text-1 {
   margin-top: 20px;
   text-align: center;
   padding: 10px;
@@ -113,13 +143,13 @@ a {
           animation: slide-in-blurred-top 1.5s cubic-bezier(0.23, 1, 0.32, 1) 1.5s both;
 }
 
-#body .carrousel {
+#body .carrousel, .body2 .carrousel {
   margin-top: 20px;
   -webkit-animation: slide-in-bck-center 2s cubic-bezier(0.25, 0.46, 0.45, 0.94) both;
           animation: slide-in-bck-center 2s cubic-bezier(0.25, 0.46, 0.45, 0.94) both;
 }
 
-#body .materias {
+#body .materias, .body2 .materias {
   color: #ffff;
   font-family: 'Indie Flower', cursive;
   background-color: #9ADCFF;
@@ -130,11 +160,93 @@ a {
           animation: roll-in-blurred-right 0.7s cubic-bezier(0.23, 1, 0.32, 1) both;
 }
 
-#body .materias .materiasLi {
+#body .materias .materiasLi, .body2 .materias .materiasLi {
   list-style: none;
 }
 
-#body #videos {
+#body .venta, .body2 .venta {
+  background-color: #4DBACE;
+  padding: 20px;
+  color: #ffff;
+  border-radius: 30px;
+  margin: 10px;
+  font-family: 'Indie Flower', cursive;
+}
+
+#body .venta .h2Venta, .body2 .venta .h2Venta {
+  text-align: center;
+  -webkit-text-decoration-color: none;
+          text-decoration-color: none;
+          font-family: 'Indie Flower', cursive;
+}
+
+#body .venta a, .body2 .venta a {
+  text-decoration: none;
+  color: #ffff;
+}
+
+#body .venta .listaVenta, .body2 .venta .listaVenta {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  text-align: center;
+  list-style: none;
+  gap: 70px;
+}
+
+#body .venta .listaVenta .l1, .body2 .venta .listaVenta .l1 {
+  -webkit-animation: pulsate-fwd 1.5s ease-in-out infinite both;
+          animation: pulsate-fwd 1.5s ease-in-out infinite both;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+#body .footer, .body2 .footer {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  background-color: #9ADCFF;
+  padding: 30px;
+  color: #ffff;
+}
+
+#body .redes, .body2 .redes {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  list-style: none;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  padding: 10px;
+  background-color: #9ADCFF;
+  margin-bottom: -15px;
+  color: #ffff;
+}
+
+#body .redes a, .body2 .redes a {
+  text-decoration: none;
+  color: #ffff;
+}
+
+.body2 #videos {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
