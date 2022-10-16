@@ -14,7 +14,7 @@ a { text-decoration: none;
         bg-color2:#4DBACE,
         bg-color3:#9ADCFF,
         color:#ffff,
-        fontFamily:'Indie Flower', cursive,
+        font-family:'Indie Flower', cursive,
         );
 #body{
     background-color: map-get($estilos, bg-color);
@@ -49,6 +49,7 @@ a { text-decoration: none;
         margin-top: 20px;
         text-align: center;
         padding: 10px;
+        border-radius: 45px;
         animation:roll-in-blurred-right .7s cubic-bezier(.23,1.000,.32,1.000) both;
         .materiasLi{
             list-style: none;
@@ -72,11 +73,14 @@ a { text-decoration: none;
         .listaVenta{
             display: flex;
             text-align: center;
+            flex-direction: row-reverse;
             list-style: none;
-            gap: 70px;
+            gap: 20px;
+            margin-left: -20px;
             .l1{
                 animation:pulsate-fwd 1.5s ease-in-out infinite both;
                 display: flex;
+                flex-direction: row-reverse;
                 flex-direction: column;
                 align-items: center;
                 justify-content: center;
@@ -107,12 +111,17 @@ a { text-decoration: none;
 }
 
     //Hoja Videos//
-    .body2{
-        @extend #body ;
+    #body2{
+        @extend #body;
         #videos{
             display: flex;
             flex-direction: column;
             padding: 15px;
+            .titulo-h2{
+                color: #ffff;
+                display: flex;
+                font-family: map-get($estilos, font-family );
+            }
         }
     }
 // Estilos sweet alert//
