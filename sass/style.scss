@@ -14,7 +14,6 @@ a { text-decoration: none;
         bg-color2:#4DBACE,
         bg-color3:#9ADCFF,
         color:#ffff,
-        font-family:'Indie Flower', cursive,
         );
 #body{
     background-color: map-get($estilos, bg-color);
@@ -121,6 +120,14 @@ a { text-decoration: none;
                 color: #ffff;
                 display: flex;
                 font-family: map-get($estilos, font-family );
+            }
+            #listaVideos{
+                background-color: map-get($estilos, bg-color2 );
+                color: #ffff;
+                text-align: center;
+                margin-bottom: 10px;
+                border-radius: 15px;
+                font-family: 'Indie Flower', cursive;
             }
         }
     }
