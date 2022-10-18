@@ -8,7 +8,7 @@ a { text-decoration: none;
     @keyframes slide-in-blurred-top{0%{transform:translateY(-1000px) scaleY(2.5) scaleX(.2);transform-origin:50% 0;filter:blur(40px);opacity:0}100%{transform:translateY(0) scaleY(1) scaleX(1);transform-origin:50% 50%;filter:blur(0);opacity:1}}
     @keyframes slide-in-bck-center{0%{transform:translateZ(600px);opacity:0}100%{transform:translateZ(0);opacity:1}}
     @keyframes pulsate-fwd{0%{transform:scale(1)}50%{transform:scale(1.1)}100%{transform:scale(1)}}
-@import url('https://fonts.googleapis.com/css2?family=Indie+Flower&display=swap');
+    @import url('https://fonts.googleapis.com/css2?family=Indie+Flower&display=swap');
  $estilos: (
         bg-color:#9DE9E9,
         bg-color2:#4DBACE,
@@ -72,7 +72,6 @@ a { text-decoration: none;
         .listaVenta{
             display: flex;
             text-align: center;
-            flex-direction: row-reverse;
             list-style: none;
             gap: 20px;
             margin-left: -20px;
@@ -84,6 +83,9 @@ a { text-decoration: none;
                 align-items: center;
                 justify-content: center;
             }
+        }
+        .ventaPc{
+            display: none;
         }
     }
     .footer{
@@ -129,6 +131,62 @@ a { text-decoration: none;
                 border-radius: 15px;
                 font-family: 'Indie Flower', cursive;
             }
+        }
+    }
+    #body3{
+        @extend #body2;
+        #contacto{
+            display: flex;
+            flex-direction: column;
+            color: #ffff;
+            font-family: 'Indie Flower', cursive;
+            margin: 10px;
+            border: 2px solid #9ADCFF;
+            border-radius: 15px;
+            padding: 1.25rem;
+            .redesContacto{
+            display: flex;
+            list-style: none;
+            padding: 10px;
+            margin-bottom: 2.5px;
+            justify-content: flex-start;
+            gap: 10px;
+            }
+        }
+        #formularios{
+            padding: 5px;
+            font-size: 16px;
+            display: flex;
+            flex-direction: column;
+            gap: 7px;
+            background-color: #4DBACE;
+            border-radius: 15px;
+            margin-bottom: 15px;
+            font-family: 'Indie Flower', cursive;
+            font-size: 23px;
+            #nombre{
+                margin-bottom: 10px;
+                border-top-style: none;
+                border-left-style: none;
+                border-right-style: none;
+                border-bottom: 1px solid #ffffff;
+                button, input, optgroup, select, textarea{
+                    color: transparent;
+                }
+            }
+            #btnEnviar{
+                background: #fff;
+                color: #222;
+                text-align: center;
+                padding: 0.5em;
+                box-sizing: border-box;
+                background: #fff;
+                border: none;
+                box-shadow: none;
+                border-radius: 0.25em;
+                font-family: 'Indie Flower', cursive;
+                font-size: 16px;
+            }  
         }
     }
 // Estilos sweet alert//
